@@ -17,6 +17,15 @@ services:
     networks:
       vpcbr:
         ipv4_address: 10.5.0.5
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    links:
+      - rest
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.7
 networks:
   vpcbr:
     driver: bridge
