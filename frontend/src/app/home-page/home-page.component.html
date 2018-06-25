@@ -1,0 +1,37 @@
+<div style="text-align:center">
+    <ng-autocomplete style="margin-top: 0px;height: 0px 1important;" (selected)="Selected($event)" class="ng-autocomplete-dropdown ng-auto-complete" [group]="group"></ng-autocomplete>
+    <div id="chart">
+        <chart *ngIf="ready" type="StockChart" [options]="options"></chart>
+    </div>
+    
+    <table *ngIf="ready || readyNoData" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Insider</th>
+                <th>Relation</th>
+                <th>Trade Date</th>
+                <th>Transaction</th>
+                <th>Security</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Value USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                <td>{{transaction.insider.name}}</td>
+                <td>{{transaction.insider.relation.officerTitle}}</td>
+                <td>{{transaction.transactionInfo.date | date: 'dd/MM/yyyy'}}</td>
+                <td title="{{transaction.transactionInfo.transactionType.description}}">{{transaction.transactionInfo.transactionType.label}}</td>
+                <td>{{transaction.transactionInfo.security}}</td>
+                <td>{{transaction.transactionInfo.shares}}</td>
+                <td>{{transaction.transactionInfo.price}}</td>
+                <td>{{transaction.transactionInfo.valueUSD.toFixed(2)}}</td>
+                <!-- <td>{{transaction.transactionInfo.price * transaction.transactionInfo.shares}}</td> -->
+            </tr>
+        </tbody>
+        <pagination-controls class="my-pagination" (pageChange)="p = $event" directionLinks="false"></pagination-controls>
+    </table>
+</div>
+
+<!-- | filter : searchText" -->

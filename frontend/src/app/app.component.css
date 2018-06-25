@@ -1,0 +1,21 @@
+.jumbotron {
+    background-color: #999999;
+    color: #fff;
+    padding: 55px 25px 25px 100px;
+    font-family: Montserrat, sans-serif;
+    height:auto;
+    max-height:150%;
+    overflow:auto; 
+}
+
+.jumbotron[_ngcontent-c0]{
+    color: black;
+}
+
+.bg-light {
+    background-color: #212529!important;
+}
+
+.navbar-light .navbar-text {
+    color: #ffffff;
+}

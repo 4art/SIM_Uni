@@ -1,0 +1,40 @@
+ng-autocomplete {
+    margin: 10px;
+}
+
+chart {
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;
+}
+
+table {
+    margin-top: 10px;
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid #2c5836;
+    padding: 8px;
+}
+
+.table thead th{
+    border: 1px solid #2c5836;
+}
+
+.pagination-next{
+    display: inline !important;
+}
+
+pagination-controls .my-pagination{
+    width: 500px !important;
+  }
+
+/*.ngx-pagination .current{
+    padding: 5px;
+    background: #2c5836 !important;
+}*/
+
+
+
+
