@@ -1,4 +1,4 @@
-FROM 01798538579/transactionsdb
+FROM postgres
 WORKDIR /db
 COPY . /db/
 ENV POSTGRES_PASSWORD=simproject
