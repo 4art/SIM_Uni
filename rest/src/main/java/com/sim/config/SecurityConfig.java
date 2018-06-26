@@ -28,14 +28,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     auth.jdbcAuthentication()
     .dataSource(dataSource)
         .passwordEncoder(new Md5PasswordEncoder())
-    .usersByUsernameQuery("SELECT email as username, password, enabled FROM rest.user WHERE email = ?")
+    .usersByUsernameQuery("SELECT email as username, password, enabled FROM sim.user WHERE email = ?")
         .authoritiesByUsernameQuery(
             "SELECT u.id, " +
             "       u.email as username, " +
             "       r.name as role " +
-            "  FROM rest.user_role ur " +
-            "INNER JOIN rest.user u ON u.id = ur.user_id " +
-            "INNER JOIN rest.role r ON r.id = ur.role_id " +
+            "  FROM sim.user_role ur " +
+            "INNER JOIN sim.user u ON u.id = ur.user_id " +
+            "INNER JOIN sim.role r ON r.id = ur.role_id " +
             " WHERE u.email = ?");
 
   }
