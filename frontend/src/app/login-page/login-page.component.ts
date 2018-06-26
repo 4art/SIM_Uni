@@ -13,6 +13,7 @@ import { AuthService } from '../modules/auth/auth.service';
 })
 export class LoginPageComponent {
   private user: any = {};
+  private isValidFormSubmitted = true;
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -27,6 +28,7 @@ export class LoginPageComponent {
       this.router.navigate(['/home']);
     }, err => {
       console.log("User authentication failed!");
+      this.isValidFormSubmitted = false;
     });
   }
 }

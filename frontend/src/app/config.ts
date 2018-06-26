@@ -1,8 +1,8 @@
 export class Config {
     private rest: String
     public getRest(): string {
-        return "http://rest.metraf.eu"
-        // return "http://localhost:8080"
+        // return "http://rest.metraf.eu"
+        return "http://10.5.0.5:8080"
     }
     private title: String
     public getTitle(): string {
