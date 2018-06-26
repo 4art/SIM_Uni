@@ -1,14 +1,16 @@
 package com.sim.module.insider.model.builder;
 
-import eu.metraf.rest.module.companies.model.Company;
-import eu.metraf.rest.module.insider.model.Insider;
-import eu.metraf.rest.module.insider.model.InsiderAddress;
-import eu.metraf.rest.module.insider.model.InsiderRelation;
+import com.sim.module.company.model.Company;
+import com.sim.module.insider.model.Insider;
+import com.sim.module.insider.model.InsiderAddress;
+import com.sim.module.insider.model.InsiderRelation;
+
+import java.util.List;
 
 public final class InsiderBuilder {
   private int id;
   private String name;
-  private InsiderAddress address;
+  private List<InsiderAddress> addresses;
   private Company company;
   private InsiderRelation relation;
 
@@ -29,8 +31,8 @@ public final class InsiderBuilder {
     return this;
   }
 
-  public InsiderBuilder withAddress(InsiderAddress address) {
-    this.address = address;
+  public InsiderBuilder withAddresses(List<InsiderAddress> addresses) {
+    this.addresses = addresses;
     return this;
   }
 
@@ -48,7 +50,7 @@ public final class InsiderBuilder {
     Insider insider = new Insider();
     insider.setId(id);
     insider.setName(name);
-    insider.setAddress(address);
+    insider.setAddresses(addresses);
     insider.setCompany(company);
     insider.setRelation(relation);
     return insider;

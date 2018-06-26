@@ -1,7 +1,8 @@
 package com.sim.module.transaction.model.builder;
 
-import eu.metraf.rest.module.transaction.model.Transaction;
-import eu.metraf.rest.module.transaction.model.TransactionStaticDto;
+
+import com.sim.module.transaction.model.Transaction;
+import com.sim.module.transaction.model.TransactionStaticDto;
 
 import java.util.Date;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.sim.module.transaction.model.builder;
 
-import eu.metraf.rest.module.transaction.model.TransactionCode;
-import eu.metraf.rest.module.transaction.model.TransactionType;
+import com.sim.module.transaction.model.TransactionCode;
+import com.sim.module.transaction.model.TransactionType;
 
 public final class TransactionTypeBuilder {
   private TransactionCode code;

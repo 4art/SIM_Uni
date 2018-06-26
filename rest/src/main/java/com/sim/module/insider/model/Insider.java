@@ -1,12 +1,13 @@
 package com.sim.module.insider.model;
 
-
 import com.sim.module.company.model.Company;
+
+import java.util.List;
 
 public class Insider {
   private int id;
   private String name;
-  private InsiderAddress address;
+  private List<InsiderAddress> addresses;
   private Company company;
   private InsiderRelation relation;
 
@@ -26,12 +27,12 @@ public class Insider {
     this.name = name;
   }
 
-  public InsiderAddress getAddress() {
-    return address;
+  public List<InsiderAddress> getAddresses() {
+    return addresses;
   }
 
-  public void setAddress(InsiderAddress address) {
-    this.address = address;
+  public void setAddresses(List<InsiderAddress> addresses) {
+    this.addresses = addresses;
   }
 
   public Company getCompany() {
@@ -55,7 +56,7 @@ public class Insider {
     return "Insider{" +
         "id=" + id +
         ", name='" + name + '\'' +
-        ", address=" + address +
+        ", addresses=" + addresses +
         ", company=" + company +
         ", relation=" + relation +
         '}';

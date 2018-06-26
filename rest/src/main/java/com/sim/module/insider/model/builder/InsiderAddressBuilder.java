@@ -1,6 +1,6 @@
 package com.sim.module.insider.model.builder;
 
-import eu.metraf.rest.module.insider.model.InsiderAddress;
+import com.sim.module.insider.model.InsiderAddress;
 
 public final class InsiderAddressBuilder {
   private String country;

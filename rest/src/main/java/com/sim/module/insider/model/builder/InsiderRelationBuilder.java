@@ -1,6 +1,6 @@
 package com.sim.module.insider.model.builder;
 
-import eu.metraf.rest.module.insider.model.InsiderRelation;
+import com.sim.module.insider.model.InsiderRelation;
 
 public final class InsiderRelationBuilder {
   private boolean other;
