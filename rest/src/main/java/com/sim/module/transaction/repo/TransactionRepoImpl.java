@@ -9,6 +9,7 @@ import org.postgresql.util.PGobject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -109,7 +110,7 @@ public class TransactionRepoImpl implements TransactionRepo {
     return null;
   }
 
-
+  @Async
   @Override
   public CompletableFuture<Optional<List<Transaction>>> findByCompanyIdAsync(int companyId) {
     return CompletableFuture.completedFuture(findByCompanyId(companyId));
@@ -134,6 +135,7 @@ public class TransactionRepoImpl implements TransactionRepo {
         .build();
   }
 
+  @Async
   @Override
   public CompletableFuture<Optional<List<TransactionType>>> findAllTransactionTypesAsync() {
     return CompletableFuture.completedFuture(findAllTransactionTypes());
