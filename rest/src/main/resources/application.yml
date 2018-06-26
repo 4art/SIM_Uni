@@ -6,7 +6,8 @@ spring:
 #    basic:
 #      enabled: true
   datasource:
-    url: jdbc:postgresql://192.168.99.100:5432/sim
+#    url: jdbc:postgresql://192.168.99.100:5432/sim
+    url: jdbc:postgresql://10.5.0.8:5432/sim
     username: sim
     password: simproject
     driverClassName: org.postgresql.Driver

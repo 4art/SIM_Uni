@@ -8,12 +8,20 @@ services:
     networks:
       vpcbr:
         ipv4_address: 10.5.0.6
+  psql:
+    build: ./db
+    ports: 
+      - 5432:5432
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.8
   rest:
     build: ./rest
     ports:
       - 8080:8080
     links:
       - yahoo-fin
+      - psql
     networks:
       vpcbr:
         ipv4_address: 10.5.0.5
