@@ -3,7 +3,7 @@ export class Config {
     public getRest(): string {
         // return "http://rest.metraf.eu"
         // return "http://10.5.0.5:8080"
-        return "http://167.99.246.230:8080"
+        return "http://localhost:8080"
     }
     private title: String
     public getTitle(): string {
